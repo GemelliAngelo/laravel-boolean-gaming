@@ -1,0 +1,205 @@
+<?php
+
+namespace Database\Seeders;
+
+use App\Models\Game;
+use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use Illuminate\Database\Seeder;
+
+class GamesTableSeeder extends Seeder
+{
+    /**
+     * Run the database seeds.
+     */
+    public function run(): void
+    {
+
+        $games = [
+            [
+                "id" => 1,
+                "title" => "The Legend of Zelda: Breath of the Wild",
+                "genre" => "Action-Adventure",
+                "platform" => "Nintendo Switch",
+                "developer" => "Nintendo EPD",
+                "publisher" => "Nintendo",
+                "release_date" => "2017-03-03",
+                "rating" => 9.7,
+                "price" => 59.99,
+                "game_mode" => "Single-player",
+                "description" => "An open-world adventure game in the kingdom of Hyrule.",
+                "cover_url" => "https://example.com/images/zelda_botw.jpg",
+                "trailer_url" => "https://www.youtube.com/watch?v=1rPxiXXxftE",
+                "created_at" => "2025-04-14 10:00:00",
+                "updated_at" => "2025-04-14 10:00:00"
+            ],
+            [
+                "id" => 2,
+                "title" => "Elden Ring",
+                "genre" => "Action RPG",
+                "platform" => "PC",
+                "developer" => "FromSoftware",
+                "publisher" => "Bandai Namco",
+                "release_date" => "2022-02-25",
+                "rating" => 9.5,
+                "price" => 49.99,
+                "game_mode" => "Single-player / Multiplayer",
+                "description" => "Explore a dark fantasy world and defeat powerful bosses.",
+                "cover_url" => "https://example.com/images/elden_ring.jpg",
+                "trailer_url" => "https://www.youtube.com/watch?v=E3Huy2cdih0",
+                "created_at" => "2025-04-14 10:05:00",
+                "updated_at" => "2025-04-14 10:05:00"
+            ],
+            [
+                "id" => 3,
+                "title" => "Minecraft",
+                "genre" => "Sandbox",
+                "platform" => "Multi-platform",
+                "developer" => "Mojang Studios",
+                "publisher" => "Microsoft",
+                "release_date" => "2011-11-18",
+                "rating" => 9.0,
+                "price" => 26.95,
+                "game_mode" => "Single-player / Multiplayer / Co-op",
+                "description" => "Build, explore and survive in a pixelated world of blocks.",
+                "cover_url" => "https://example.com/images/minecraft.jpg",
+                "trailer_url" => "https://www.youtube.com/watch?v=MmB9b5njVbA",
+                "created_at" => "2025-04-14 10:10:00",
+                "updated_at" => "2025-04-14 10:10:00"
+            ],
+            [
+                "id" => 4,
+                "title" => "God of War Ragnarök",
+                "genre" => "Action",
+                "platform" => "PS5",
+                "developer" => "Santa Monica Studio",
+                "publisher" => "Sony Interactive Entertainment",
+                "release_date" => "2022-11-09",
+                "rating" => 9.6,
+                "price" => 69.99,
+                "game_mode" => "Single-player",
+                "description" => "Kratos and Atreus face the Norse apocalypse together.",
+                "cover_url" => "https://example.com/images/gow_ragnarok.jpg",
+                "trailer_url" => "https://www.youtube.com/watch?v=hfJ4Km46A-0",
+                "created_at" => "2025-04-14 10:12:00",
+                "updated_at" => "2025-04-14 10:12:00"
+            ],
+            [
+                "id" => 5,
+                "title" => "Grand Theft Auto V",
+                "genre" => "Action-Adventure",
+                "platform" => "Multi-platform",
+                "developer" => "Rockstar North",
+                "publisher" => "Rockstar Games",
+                "release_date" => "2013-09-17",
+                "rating" => 9.4,
+                "price" => 29.99,
+                "game_mode" => "Single-player / Multiplayer",
+                "description" => "Crime, chaos, and open-world madness in Los Santos.",
+                "cover_url" => "https://example.com/images/gta_v.jpg",
+                "trailer_url" => "https://www.youtube.com/watch?v=QkkoHAzjnUs",
+                "created_at" => "2025-04-14 10:14:00",
+                "updated_at" => "2025-04-14 10:14:00"
+            ],
+            [
+                "id" => 6,
+                "title" => "Red Dead Redemption 2",
+                "genre" => "Action-Adventure",
+                "platform" => "Multi-platform",
+                "developer" => "Rockstar Studios",
+                "publisher" => "Rockstar Games",
+                "release_date" => "2018-10-26",
+                "rating" => 9.8,
+                "price" => 39.99,
+                "game_mode" => "Single-player / Multiplayer",
+                "description" => "An epic tale of life in America’s unforgiving heartland.",
+                "cover_url" => "https://example.com/images/rdr2.jpg",
+                "trailer_url" => "https://www.youtube.com/watch?v=eaW0tYpxyp0",
+                "created_at" => "2025-04-14 10:16:00",
+                "updated_at" => "2025-04-14 10:16:00"
+            ],
+            [
+                "id" => 7,
+                "title" => "The Witcher 3: Wild Hunt",
+                "genre" => "RPG",
+                "platform" => "Multi-platform",
+                "developer" => "CD Projekt Red",
+                "publisher" => "CD Projekt",
+                "release_date" => "2015-05-19",
+                "rating" => 9.5,
+                "price" => 19.99,
+                "game_mode" => "Single-player",
+                "description" => "Become Geralt of Rivia and hunt monsters across a vast fantasy world.",
+                "cover_url" => "https://example.com/images/witcher3.jpg",
+                "trailer_url" => "https://www.youtube.com/watch?v=c0i88t0Kacs",
+                "created_at" => "2025-04-14 10:18:00",
+                "updated_at" => "2025-04-14 10:18:00"
+            ],
+            [
+                "id" => 8,
+                "title" => "Cyberpunk 2077",
+                "genre" => "RPG",
+                "platform" => "PC",
+                "developer" => "CD Projekt Red",
+                "publisher" => "CD Projekt",
+                "release_date" => "2020-12-10",
+                "rating" => 7.8,
+                "price" => 29.99,
+                "game_mode" => "Single-player",
+                "description" => "Open-world RPG set in a dystopian future city.",
+                "cover_url" => "https://example.com/images/cyberpunk2077.jpg",
+                "trailer_url" => "https://www.youtube.com/watch?v=qIcTM8WXFjk",
+                "created_at" => "2025-04-14 10:20:00",
+                "updated_at" => "2025-04-14 10:20:00"
+            ],
+            [
+                "id" => 9,
+                "title" => "Hades",
+                "genre" => "Roguelike",
+                "platform" => "Multi-platform",
+                "developer" => "Supergiant Games",
+                "publisher" => "Supergiant Games",
+                "release_date" => "2020-09-17",
+                "rating" => 9.0,
+                "price" => 24.99,
+                "game_mode" => "Single-player",
+                "description" => "Battle your way out of the Underworld in this fast-paced roguelike.",
+                "cover_url" => "https://example.com/images/hades.jpg",
+                "trailer_url" => "https://www.youtube.com/watch?v=91sfrhD4qNg",
+                "created_at" => "2025-04-14 10:22:00",
+                "updated_at" => "2025-04-14 10:22:00"
+            ],
+            [
+                "id" => 10,
+                "title" => "Stardew Valley",
+                "genre" => "Simulation",
+                "platform" => "Multi-platform",
+                "developer" => "ConcernedApe",
+                "publisher" => "ConcernedApe",
+                "release_date" => "2016-02-26",
+                "rating" => 8.9,
+                "price" => 14.99,
+                "game_mode" => "Single-player / Co-op",
+                "description" => "A farming simulator with RPG elements and cozy vibes.",
+                "cover_url" => "https://example.com/images/stardew_valley.jpg",
+                "trailer_url" => "https://www.youtube.com/watch?v=ot7uXNQskhs",
+                "created_at" => "2025-04-14 10:24:00",
+                "updated_at" => "2025-04-14 10:24:00"
+            ],
+        ];
+
+
+        foreach ($games as $game) {
+
+            $newGame = new Game();
+
+            $newGame->title = $game["title"];
+            $newGame->publisher = $game["publisher"];
+            $newGame->release_date = $game["release_date"];
+            $newGame->rating = $game["rating"];
+            $newGame->price = $game["price"];
+            $newGame->description = $game["description"];
+
+            $newGame->save();
+        }
+    }
+}

@@ -9,8 +9,8 @@
                     <img src="{{$game->cover_url}}" alt="cover {{$game->title}}">
                     <div class="card-body">
                         <h5 class="card-title">{{$game->title}}</h5>
-                        <small>{{$game->publisher}}</small>
-                        <h5>€ {{$game->price}}</h5>
+                        <span>{{$game->publisher}}</span>
+                        <h5 class="card-subtitle my-3">€ {{$game->price}}</h5>
                         <span>{{$game->rating}}</span>
                     </div>
                 </div>

@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\Game;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class GamesController extends Controller
 {
@@ -37,12 +38,17 @@ class GamesController extends Controller
 
         $newGame->title = $data['title'];
         $newGame->description = $data['description'];
-        $newGame->cover_url = $data['cover_url'];
         $newGame->publisher = $data['publisher'];
         $newGame->developer = $data['developer'];
         $newGame->release_date = $data['release_date'];
         $newGame->price = $data['price'];
         $newGame->rating = $data['rating'];
+
+        if (array_key_exists('cover_url', $data)) {
+            $cover_url = Storage::putFile('covers', $data['cover_url']);
+
+            $newGame->cover_url = $cover_url;
+        }
 
         $newGame->save();
 

@@ -15,7 +15,7 @@
     <hr>
     
     <div class="jumbo">
-        <img src="{{$game->cover_url}}" alt="cover {{$game->title}}">
+        <img src="{{asset('storage/'. $game->cover_url)}}" alt="cover {{$game->title}}">
     </div>
     <div class="d-flex my-3 justify-content-between align-items-center">
         <h5 class="m-0">{{$game->publisher}} / {{$game->developer}}</h5>

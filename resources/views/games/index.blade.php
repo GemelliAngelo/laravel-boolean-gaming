@@ -18,7 +18,7 @@
         <div class="col">
             <a class="link-underline link-underline-opacity-0" href="{{route('games.show',$game)}}">
                 <div class="card h-100">
-                    <img src="{{$game->cover_url}}" alt="cover {{$game->title}}">
+                    <img src="{{asset('storage/'. $game->cover_url)}}" alt="cover {{$game->title}}">
                     <div class="card-body d-flex flex-column justify-content-between">
                         <h5 class="card-title">{{$game->title}}</h5>
                         <span>{{$game->publisher}} / {{$game->developer}}</span>

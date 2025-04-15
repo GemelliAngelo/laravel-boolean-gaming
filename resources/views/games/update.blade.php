@@ -2,7 +2,7 @@
 @section('title','Modifica il form qui sotto')
 
 @section('content')
-    <form action="{{route("games.update",$game)}}" method="POST">
+    <form action="{{route("games.update",$game)}}" method="POST" enctype="multipart/form-data">
         @csrf
         @method('PUT')
 

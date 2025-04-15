@@ -2,7 +2,7 @@
 @section('title','Compila il form qui sotto')
 
 @section('content')
-    <form action="{{route("games.store")}}" method="POST">
+    <form action="{{route("games.store")}}" method="POST" enctype="multipart/form-data">
         @csrf
         <div class="row">
             <div class="col-6">

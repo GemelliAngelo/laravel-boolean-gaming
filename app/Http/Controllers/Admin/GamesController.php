@@ -105,6 +105,10 @@ class GamesController extends Controller
      */
     public function destroy(Game $game)
     {
+        if ($game->cover_url) {
+            Storage::delete($game->cover_url);
+        }
+
         $game->delete();
 
         return redirect()->route("games.index");

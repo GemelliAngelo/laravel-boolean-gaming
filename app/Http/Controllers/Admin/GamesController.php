@@ -23,7 +23,7 @@ class GamesController extends Controller
      */
     public function create()
     {
-        //
+        return view('games.store');
     }
 
     /**
@@ -37,9 +37,9 @@ class GamesController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show(Game $game)
     {
-        //
+        return view('games.show', compact('game'));
     }
 
     /**

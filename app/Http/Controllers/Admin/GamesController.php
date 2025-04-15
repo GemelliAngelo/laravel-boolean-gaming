@@ -87,8 +87,9 @@ class GamesController extends Controller
         $game->rating = $data['rating'];
 
         if (array_key_exists('cover_url', $data)) {
-
-            Storage::delete($game->cover_url);
+            if ($game->cover_url) {
+                Storage::delete($game->cover_url);
+            }
 
             $cover_url = Storage::putFile('covers', $data['cover_url']);
 

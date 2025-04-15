@@ -83,7 +83,7 @@
             </div>
         </nav>
 
-        <main class="">
+        <main class="bg-body-secondary py-3">
             <div class="container my-5">
                 <h1 class="my-5">@yield('title')</h1>
                 @yield('content')

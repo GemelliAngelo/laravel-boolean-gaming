@@ -14,9 +14,8 @@ class GamesTableSeeder extends Seeder
     public function run(): void
     {
 
-        $games = [
+        $games = $videogames = [
             [
-                "id" => 1,
                 "title" => "The Legend of Zelda: Breath of the Wild",
                 "genre" => "Action-Adventure",
                 "platform" => "Nintendo Switch",
@@ -26,10 +25,9 @@ class GamesTableSeeder extends Seeder
                 "rating" => 9.7,
                 "price" => 59.99,
                 "game_mode" => "Single-player",
-                "description" => "An open-world adventure game in the kingdom of Hyrule.",
+                "description" => "Un'avventura open-world attraverso il vasto regno di Hyrule."
             ],
             [
-                "id" => 2,
                 "title" => "Elden Ring",
                 "genre" => "Action RPG",
                 "platform" => "PC",
@@ -39,10 +37,9 @@ class GamesTableSeeder extends Seeder
                 "rating" => 9.5,
                 "price" => 49.99,
                 "game_mode" => "Single-player / Multiplayer",
-                "description" => "Explore a dark fantasy world and defeat powerful bosses.",
+                "description" => "Esplora un mondo fantasy oscuro e affronta boss mortali."
             ],
             [
-                "id" => 3,
                 "title" => "Minecraft",
                 "genre" => "Sandbox",
                 "platform" => "Multi-platform",
@@ -52,10 +49,9 @@ class GamesTableSeeder extends Seeder
                 "rating" => 9.0,
                 "price" => 26.95,
                 "game_mode" => "Single-player / Multiplayer / Co-op",
-                "description" => "Build, explore and survive in a pixelated world of blocks.",
+                "description" => "Costruisci, esplora e sopravvivi in un mondo sandbox a blocchi."
             ],
             [
-                "id" => 4,
                 "title" => "God of War Ragnarök",
                 "genre" => "Action",
                 "platform" => "PS5",
@@ -65,10 +61,9 @@ class GamesTableSeeder extends Seeder
                 "rating" => 9.6,
                 "price" => 69.99,
                 "game_mode" => "Single-player",
-                "description" => "Kratos and Atreus face the Norse apocalypse together.",
+                "description" => "Kratos e Atreus affrontano dèi e mostri mentre si avvicina il Ragnarök."
             ],
             [
-                "id" => 5,
                 "title" => "Grand Theft Auto V",
                 "genre" => "Action-Adventure",
                 "platform" => "Multi-platform",
@@ -78,10 +73,9 @@ class GamesTableSeeder extends Seeder
                 "rating" => 9.4,
                 "price" => 29.99,
                 "game_mode" => "Single-player / Multiplayer",
-                "description" => "Crime, chaos, and open-world madness in Los Santos.",
+                "description" => "Un mondo aperto pieno di crimini ambientato nella città fittizia di Los Santos."
             ],
             [
-                "id" => 6,
                 "title" => "Red Dead Redemption 2",
                 "genre" => "Action-Adventure",
                 "platform" => "Multi-platform",
@@ -91,10 +85,9 @@ class GamesTableSeeder extends Seeder
                 "rating" => 9.8,
                 "price" => 39.99,
                 "game_mode" => "Single-player / Multiplayer",
-                "description" => "An epic tale of life in America’s unforgiving heartland.",
+                "description" => "Vivi la vita di un fuorilegge negli ultimi giorni del selvaggio West."
             ],
             [
-                "id" => 7,
                 "title" => "The Witcher 3: Wild Hunt",
                 "genre" => "RPG",
                 "platform" => "Multi-platform",
@@ -104,10 +97,9 @@ class GamesTableSeeder extends Seeder
                 "rating" => 9.5,
                 "price" => 19.99,
                 "game_mode" => "Single-player",
-                "description" => "Become Geralt of Rivia and hunt monsters across a vast fantasy world.",
+                "description" => "Interpreta Geralt e caccia mostri in un ricco mondo fantasy immersivo."
             ],
             [
-                "id" => 8,
                 "title" => "Cyberpunk 2077",
                 "genre" => "RPG",
                 "platform" => "PC",
@@ -117,10 +109,9 @@ class GamesTableSeeder extends Seeder
                 "rating" => 7.8,
                 "price" => 29.99,
                 "game_mode" => "Single-player",
-                "description" => "Open-world RPG set in a dystopian future city.",
+                "description" => "Un RPG open-world ambientato in una città futuristica e distopica."
             ],
             [
-                "id" => 9,
                 "title" => "Hades",
                 "genre" => "Roguelike",
                 "platform" => "Multi-platform",
@@ -130,10 +121,9 @@ class GamesTableSeeder extends Seeder
                 "rating" => 9.0,
                 "price" => 24.99,
                 "game_mode" => "Single-player",
-                "description" => "Battle your way out of the Underworld in this fast-paced roguelike.",
+                "description" => "Combatti attraverso l'Oltretomba in un'avventura roguelike frenetica."
             ],
             [
-                "id" => 10,
                 "title" => "Stardew Valley",
                 "genre" => "Simulation",
                 "platform" => "Multi-platform",
@@ -143,9 +133,22 @@ class GamesTableSeeder extends Seeder
                 "rating" => 8.9,
                 "price" => 14.99,
                 "game_mode" => "Single-player / Co-op",
-                "description" => "A farming simulator with RPG elements and cozy vibes.",
+                "description" => "Un simulatore agricolo con elementi RPG e un'atmosfera rilassante."
             ],
+            [
+                "title" => "Marvel's Spider-Man 2",
+                "genre" => "Action-Adventure",
+                "platform" => "PS5",
+                "developer" => "Insomniac Games",
+                "publisher" => "Sony Interactive Entertainment",
+                "release_date" => "2023-10-20",
+                "rating" => 9.2,
+                "price" => 69.99,
+                "game_mode" => "Single-player",
+                "description" => "Sfreccia tra i grattacieli di New York come Peter Parker e Miles Morales in un'entusiasmante avventura supereroistica."
+            ]
         ];
+
 
 
         foreach ($games as $game) {

@@ -3,24 +3,23 @@
 
 @section('content')
     
-    <div class="d-flex justify-content-center">
-        <img class="img-fluid w-75" src="{{asset('storage/'. $game->cover_url)}}" alt="cover {{$game->title}}">
-        <div class="d-flex flex-column justify-content-between align-items-center py-3 text-bg-dark w-25 text-center">
-            <h5 class="m-0">{{$game->publisher}} / {{$game->developer}}</h5>
-            <p class="mx-4">{{$game->description}}</p>
-            <span>Rilasciato: {{date("d/m/Y",strtotime($game->release_date))}}</span>
-            <span><i class="fa-solid fa-star me-2"></i>{{$game->rating}}</span>
+    <div class="d-flex flex-column flex-lg-row justify-content-center gap-1 my-5">
+        <img class="img-fluid w-75 rounded" src="{{asset('storage/'. $game->cover_url)}}" alt="cover {{$game->title}}">
+        <div class="d-flex flex-column justify-content-between align-items-center text-bg-dark w-25 py-3 gap-2 rounded">
+            <h5 class="text-center">{{$game->publisher}} / {{$game->developer}}</h5>
+            <span class="fs-5"><i class="fa-solid fa-star me-2"></i>{{$game->rating}}</span>
+            <p class="text-center mx-4">{{$game->description}}</p>
+            <span class="badge fs-4 text-bg-info">&#8364 {{$game->price}}</span>
+            <small>{{date("m/Y",strtotime($game->release_date))}}</small>
+            <div class="div">
+                <a class="btn btn-warning me-2" href="{{route("games.edit", $game)}}"><i class="fa-solid fa-pen"></i></a>
+                <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteModal">
+                    <i class="fa-solid fa-trash"></i>
+                </button>
+            </div>
         </div>
     </div>
-    <div class="d-flex justify-content-between align-items-center my-4">
         <a class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover" href="{{route('games.index')}}">&#8676 Torna a tutti i giochi</a>
-        <div class="div">
-            <a class="btn btn-warning me-2 border" href="{{route("games.edit", $game)}}"><i class="fa-solid fa-pen"></i></a>
-            <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteModal">
-                <i class="fa-solid fa-trash"></i>
-            </button>
-        </div>
-    </div>
 
 
     <div id="deleteModal" class="modal" tabindex="-1">
@@ -44,7 +43,7 @@
             </div>
           </div>
         </div>
-      </div>
+    </div>
 
 
 @endsection

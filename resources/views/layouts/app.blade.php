@@ -84,7 +84,7 @@
         </nav>
 
         <main class="bg-body-secondary py-3">
-            <div class="container my-5">
+            <div class="container">
                 <h1 class="my-5">@yield('title')</h1>
                 @yield('content')
             </div>

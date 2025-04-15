@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('title','Tutti i Giochi')
 @section('content')
-<div class="row row-cols-4 g-5">
+<div class="row row-cols-4 gy-5">
     <div class="col">
         <a class="link-underline link-underline-opacity-0" href="{{route('games.create')}}">
             <div class="card h-100">

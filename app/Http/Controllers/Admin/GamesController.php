@@ -80,12 +80,20 @@ class GamesController extends Controller
 
         $game->title = $data['title'];
         $game->description = $data['description'];
-        $game->cover_url = $data['cover_url'];
         $game->publisher = $data['publisher'];
         $game->developer = $data['developer'];
         $game->release_date = $data['release_date'];
         $game->price = $data['price'];
         $game->rating = $data['rating'];
+
+        if (array_key_exists('cover_url', $data)) {
+
+            Storage::delete($game->cover_url);
+
+            $cover_url = Storage::putFile('covers', $data['cover_url']);
+
+            $game->cover_url = $cover_url;
+        }
 
         $game->update();
 

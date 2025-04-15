@@ -15,7 +15,7 @@
             </div>
             <div class="col-6">
                 <div class="form-control bg-body-secondary mb-3">
-                    <label for="cover_url" class="form-label">Copertina</label>
+                    <label for="cover_url" class="form-label h-100">Copertina</label>
                     <input type="file" name="cover_url" id="cover_url" class="form-control">
                 </div>
             </div>

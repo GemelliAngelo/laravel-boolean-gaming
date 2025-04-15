@@ -84,7 +84,7 @@
         </nav>
 
         <main class="">
-            <div class="container">
+            <div class="container my-5">
                 <h1 class="my-5">@yield('title')</h1>
                 @yield('content')
             </div>

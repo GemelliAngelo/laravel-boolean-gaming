@@ -31,7 +31,22 @@ class GamesController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->all();
+
+        $newGame = new Game();
+
+        $newGame->title = $data['title'];
+        $newGame->description = $data['description'];
+        $newGame->cover_url = $data['cover_url'];
+        $newGame->publisher = $data['publisher'];
+        $newGame->developer = $data['developer'];
+        $newGame->release_date = $data['release_date'];
+        $newGame->price = $data['price'];
+        $newGame->rating = $data['rating'];
+
+        $newGame->save();
+
+        return redirect()->route('games.show', $newGame);
     }
 
     /**
@@ -45,24 +60,39 @@ class GamesController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit(Game $game)
     {
-        //
+        return view('games.update', compact('game'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, Game $game)
     {
-        //
+        $data = $request->all();
+
+        $game->title = $data['title'];
+        $game->description = $data['description'];
+        $game->cover_url = $data['cover_url'];
+        $game->publisher = $data['publisher'];
+        $game->developer = $data['developer'];
+        $game->release_date = $data['release_date'];
+        $game->price = $data['price'];
+        $game->rating = $data['rating'];
+
+        $game->update();
+
+        return redirect()->route('games.show', $game);
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(Game $game)
     {
-        //
+        $game->delete();
+
+        return redirect()->route("games.index");
     }
 }

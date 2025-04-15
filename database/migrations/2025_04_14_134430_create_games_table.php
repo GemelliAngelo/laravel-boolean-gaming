@@ -18,6 +18,7 @@ return new class extends Migration
             $table->text('cover_url')->nullable();
             $table->text('description');
             $table->string('publisher');
+            $table->string('developer');
             $table->date('release_date');
             $table->decimal('price', 10, 2);
             $table->float('rating');

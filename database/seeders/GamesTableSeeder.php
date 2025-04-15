@@ -27,10 +27,6 @@ class GamesTableSeeder extends Seeder
                 "price" => 59.99,
                 "game_mode" => "Single-player",
                 "description" => "An open-world adventure game in the kingdom of Hyrule.",
-                "cover_url" => "https://example.com/images/zelda_botw.jpg",
-                "trailer_url" => "https://www.youtube.com/watch?v=1rPxiXXxftE",
-                "created_at" => "2025-04-14 10:00:00",
-                "updated_at" => "2025-04-14 10:00:00"
             ],
             [
                 "id" => 2,
@@ -44,10 +40,6 @@ class GamesTableSeeder extends Seeder
                 "price" => 49.99,
                 "game_mode" => "Single-player / Multiplayer",
                 "description" => "Explore a dark fantasy world and defeat powerful bosses.",
-                "cover_url" => "https://example.com/images/elden_ring.jpg",
-                "trailer_url" => "https://www.youtube.com/watch?v=E3Huy2cdih0",
-                "created_at" => "2025-04-14 10:05:00",
-                "updated_at" => "2025-04-14 10:05:00"
             ],
             [
                 "id" => 3,
@@ -61,10 +53,6 @@ class GamesTableSeeder extends Seeder
                 "price" => 26.95,
                 "game_mode" => "Single-player / Multiplayer / Co-op",
                 "description" => "Build, explore and survive in a pixelated world of blocks.",
-                "cover_url" => "https://example.com/images/minecraft.jpg",
-                "trailer_url" => "https://www.youtube.com/watch?v=MmB9b5njVbA",
-                "created_at" => "2025-04-14 10:10:00",
-                "updated_at" => "2025-04-14 10:10:00"
             ],
             [
                 "id" => 4,
@@ -78,10 +66,6 @@ class GamesTableSeeder extends Seeder
                 "price" => 69.99,
                 "game_mode" => "Single-player",
                 "description" => "Kratos and Atreus face the Norse apocalypse together.",
-                "cover_url" => "https://example.com/images/gow_ragnarok.jpg",
-                "trailer_url" => "https://www.youtube.com/watch?v=hfJ4Km46A-0",
-                "created_at" => "2025-04-14 10:12:00",
-                "updated_at" => "2025-04-14 10:12:00"
             ],
             [
                 "id" => 5,
@@ -95,10 +79,6 @@ class GamesTableSeeder extends Seeder
                 "price" => 29.99,
                 "game_mode" => "Single-player / Multiplayer",
                 "description" => "Crime, chaos, and open-world madness in Los Santos.",
-                "cover_url" => "https://example.com/images/gta_v.jpg",
-                "trailer_url" => "https://www.youtube.com/watch?v=QkkoHAzjnUs",
-                "created_at" => "2025-04-14 10:14:00",
-                "updated_at" => "2025-04-14 10:14:00"
             ],
             [
                 "id" => 6,
@@ -112,10 +92,6 @@ class GamesTableSeeder extends Seeder
                 "price" => 39.99,
                 "game_mode" => "Single-player / Multiplayer",
                 "description" => "An epic tale of life in America’s unforgiving heartland.",
-                "cover_url" => "https://example.com/images/rdr2.jpg",
-                "trailer_url" => "https://www.youtube.com/watch?v=eaW0tYpxyp0",
-                "created_at" => "2025-04-14 10:16:00",
-                "updated_at" => "2025-04-14 10:16:00"
             ],
             [
                 "id" => 7,
@@ -129,10 +105,6 @@ class GamesTableSeeder extends Seeder
                 "price" => 19.99,
                 "game_mode" => "Single-player",
                 "description" => "Become Geralt of Rivia and hunt monsters across a vast fantasy world.",
-                "cover_url" => "https://example.com/images/witcher3.jpg",
-                "trailer_url" => "https://www.youtube.com/watch?v=c0i88t0Kacs",
-                "created_at" => "2025-04-14 10:18:00",
-                "updated_at" => "2025-04-14 10:18:00"
             ],
             [
                 "id" => 8,
@@ -146,10 +118,6 @@ class GamesTableSeeder extends Seeder
                 "price" => 29.99,
                 "game_mode" => "Single-player",
                 "description" => "Open-world RPG set in a dystopian future city.",
-                "cover_url" => "https://example.com/images/cyberpunk2077.jpg",
-                "trailer_url" => "https://www.youtube.com/watch?v=qIcTM8WXFjk",
-                "created_at" => "2025-04-14 10:20:00",
-                "updated_at" => "2025-04-14 10:20:00"
             ],
             [
                 "id" => 9,
@@ -163,10 +131,6 @@ class GamesTableSeeder extends Seeder
                 "price" => 24.99,
                 "game_mode" => "Single-player",
                 "description" => "Battle your way out of the Underworld in this fast-paced roguelike.",
-                "cover_url" => "https://example.com/images/hades.jpg",
-                "trailer_url" => "https://www.youtube.com/watch?v=91sfrhD4qNg",
-                "created_at" => "2025-04-14 10:22:00",
-                "updated_at" => "2025-04-14 10:22:00"
             ],
             [
                 "id" => 10,
@@ -180,10 +144,6 @@ class GamesTableSeeder extends Seeder
                 "price" => 14.99,
                 "game_mode" => "Single-player / Co-op",
                 "description" => "A farming simulator with RPG elements and cozy vibes.",
-                "cover_url" => "https://example.com/images/stardew_valley.jpg",
-                "trailer_url" => "https://www.youtube.com/watch?v=ot7uXNQskhs",
-                "created_at" => "2025-04-14 10:24:00",
-                "updated_at" => "2025-04-14 10:24:00"
             ],
         ];
 
@@ -194,6 +154,7 @@ class GamesTableSeeder extends Seeder
 
             $newGame->title = $game["title"];
             $newGame->publisher = $game["publisher"];
+            $newGame->developer = $game["developer"];
             $newGame->release_date = $game["release_date"];
             $newGame->rating = $game["rating"];
             $newGame->price = $game["price"];

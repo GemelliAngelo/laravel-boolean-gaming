@@ -10,3 +10,11 @@
 .navbar-logo {
     width: 50px;
 }
+
+.card {
+    transition: transform 0.1s;
+}
+
+.card:hover {
+    transform: scale(1.1);
+}

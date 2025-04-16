@@ -17,6 +17,7 @@ class GamesTableSeeder extends Seeder
         $games = $videogames = [
             [
                 "title" => "The Legend of Zelda: Breath of the Wild",
+                "cover_url" => "covers/PJszKRQD17ULKkiOXxIOUryA8FltMh1IxYlxL2ff.jpg",
                 "genre" => "Action-Adventure",
                 "platform" => "Nintendo Switch",
                 "developer" => "Nintendo EPD",
@@ -29,6 +30,7 @@ class GamesTableSeeder extends Seeder
             ],
             [
                 "title" => "Elden Ring",
+                "cover_url" => "covers/PKjYQP7tOTopYY9VjiyYM7rCJcnmcu5bCa3zDP2G.jpg",
                 "genre" => "Action RPG",
                 "platform" => "PC",
                 "developer" => "FromSoftware",
@@ -41,6 +43,7 @@ class GamesTableSeeder extends Seeder
             ],
             [
                 "title" => "Minecraft",
+                "cover_url" => "covers/IgVWTbhmfWNFZ6lgQMqFopM1KRH4FpYum61EOPw8.jpg",
                 "genre" => "Sandbox",
                 "platform" => "Multi-platform",
                 "developer" => "Mojang Studios",
@@ -53,6 +56,7 @@ class GamesTableSeeder extends Seeder
             ],
             [
                 "title" => "God of War Ragnarök",
+                "cover_url" => "covers/EQmpIPdgpyYgDLE6KalV5vgjBfAkjQ9Kgjub9c3c.jpg",
                 "genre" => "Action",
                 "platform" => "PS5",
                 "developer" => "Santa Monica Studio",
@@ -65,6 +69,7 @@ class GamesTableSeeder extends Seeder
             ],
             [
                 "title" => "Grand Theft Auto V",
+                "cover_url" => "covers/Xz3TSSFSS8PfI4rlzoc4o60NWnrVMpJAVu9NEZJy.jpg",
                 "genre" => "Action-Adventure",
                 "platform" => "Multi-platform",
                 "developer" => "Rockstar North",
@@ -77,6 +82,7 @@ class GamesTableSeeder extends Seeder
             ],
             [
                 "title" => "Red Dead Redemption 2",
+                "cover_url" => "covers/LMCeom1jm3TEa7wuFgRvf5qFcMdvlFooGHWGiH1e.jpg",
                 "genre" => "Action-Adventure",
                 "platform" => "Multi-platform",
                 "developer" => "Rockstar Studios",
@@ -89,6 +95,7 @@ class GamesTableSeeder extends Seeder
             ],
             [
                 "title" => "The Witcher 3: Wild Hunt",
+                "cover_url" => "covers/efhgq2eqno0aceA2DTr9cgkjYqTuR6ImMTcfB25q.jpg",
                 "genre" => "RPG",
                 "platform" => "Multi-platform",
                 "developer" => "CD Projekt Red",
@@ -101,6 +108,7 @@ class GamesTableSeeder extends Seeder
             ],
             [
                 "title" => "Cyberpunk 2077",
+                "cover_url" => "covers/VxKDX0idWz6S9hQWCN4DIR6Dhn8XvbF64bnsdJR1.jpg",
                 "genre" => "RPG",
                 "platform" => "PC",
                 "developer" => "CD Projekt Red",
@@ -113,6 +121,7 @@ class GamesTableSeeder extends Seeder
             ],
             [
                 "title" => "Hades",
+                "cover_url" => "covers/AkuQlfwFjBtzkPECcMYEcWXfQGvT6WR6K0U9nWQC.jpg",
                 "genre" => "Roguelike",
                 "platform" => "Multi-platform",
                 "developer" => "Supergiant Games",
@@ -125,6 +134,7 @@ class GamesTableSeeder extends Seeder
             ],
             [
                 "title" => "Stardew Valley",
+                "cover_url" => "covers/r23g4NARG8NJPmmE7rgwSOWmapOMXZSP66OyIhbG.jpg",
                 "genre" => "Simulation",
                 "platform" => "Multi-platform",
                 "developer" => "ConcernedApe",
@@ -137,6 +147,7 @@ class GamesTableSeeder extends Seeder
             ],
             [
                 "title" => "Marvel's Spider-Man 2",
+                "cover_url" => "covers/pwImoHjA1aDaonAJ64Bq06awq6LKNFJC1E7M0xKA.jpg",
                 "genre" => "Action-Adventure",
                 "platform" => "PS5",
                 "developer" => "Insomniac Games",
@@ -156,6 +167,7 @@ class GamesTableSeeder extends Seeder
             $newGame = new Game();
 
             $newGame->title = $game["title"];
+            $newGame->cover_url = $game["cover_url"];
             $newGame->publisher = $game["publisher"];
             $newGame->developer = $game["developer"];
             $newGame->release_date = $game["release_date"];

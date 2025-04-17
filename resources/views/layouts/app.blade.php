@@ -21,7 +21,7 @@
 
 </head>
 
-<body>
+<body class="bg-body-secondary">
     <div id="app">
 
 
@@ -83,7 +83,7 @@
             </div>
         </nav>
 
-        <main class="bg-body-secondary py-3">
+        <main class="py-4">
             <div class="container">
                 <h1 class="my-5">@yield('title')</h1>
                 @yield('content')

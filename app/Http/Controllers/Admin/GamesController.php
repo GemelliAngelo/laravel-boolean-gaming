@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Game;
+use App\Models\Platform;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 
@@ -24,7 +25,9 @@ class GamesController extends Controller
      */
     public function create()
     {
-        return view('games.store');
+        $platforms = Platform::all();
+
+        return view('games.store', compact('platforms'));
     }
 
     /**
@@ -52,6 +55,8 @@ class GamesController extends Controller
 
         $newGame->save();
 
+        $newGame->platforms()->attach($data['platforms']);
+
         return redirect()->route('games.show', $newGame);
     }
 
@@ -68,7 +73,9 @@ class GamesController extends Controller
      */
     public function edit(Game $game)
     {
-        return view('games.update', compact('game'));
+        $platforms = Platform::all();
+
+        return view('games.update', compact('game', 'platforms'));
     }
 
     /**
@@ -98,6 +105,8 @@ class GamesController extends Controller
 
         $game->update();
 
+        $request->has("platforms") ? $game->platforms()->sync($data["platforms"]) : $game->platforms()->detach();
+
         return redirect()->route('games.show', $game);
     }
 
@@ -110,6 +119,7 @@ class GamesController extends Controller
             Storage::delete($game->cover_url);
         }
 
+        $game->platforms()->detach();
         $game->delete();
 
         return redirect()->route("games.index");

@@ -21,8 +21,12 @@
                     <img class="card-img-top" src="{{asset('storage/'. $game->cover_url)}}" alt="cover {{$game->title}}">
                     <div class="card-body text-center text-bg-dark d-flex flex-column justify-content-between">
                         <h5 class="card-title">{{$game->title}}</h5>
-                        <small class="my-2">{{$game->publisher}} / {{$game->developer}}</small>
-                        <div class="mt-auto">
+                        <div class="my-2">
+                            @foreach ($game->platforms as $platform)
+                            <span class="badge rounded-pill" style="background-color: {{$platform->color}}">{{$platform->name}}</span>
+                            @endforeach
+                        </div>
+                        <div>
                             <span><i class="fa-solid fa-star me-2"></i>{{$game->rating}}</span>
                             <hr>
                             <span class="card-subtitle badge text-bg-info fs-6 my-3">&#8364 {{$game->price}}</span>

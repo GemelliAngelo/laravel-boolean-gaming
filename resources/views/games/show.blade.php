@@ -14,7 +14,11 @@
             </div>
             <span class="fs-5"><i class="fa-solid fa-star me-2"></i>{{$game->rating}}</span>
             <p class="text-center mx-4">{{$game->description}}</p>
-            <span class="badge fs-4 text-bg-info">&#8364 {{$game->price}}</span>
+            @if ($game->price == 0)
+                            <span class="card-subtitle badge text-bg-success fs-6 my-3">GRATIS</span>
+                            @else
+                            <span class="card-subtitle badge text-bg-light fs-6 my-3">&#8364 {{$game->price}}</span>
+                            @endif
             <small>{{date("m/Y",strtotime($game->release_date))}}</small>
             <div class="div">
                 <a class="btn btn-warning me-2" href="{{route("games.edit", $game)}}"><i class="fa-solid fa-pen"></i></a>

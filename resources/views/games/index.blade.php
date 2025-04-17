@@ -29,7 +29,11 @@
                         <div>
                             <span><i class="fa-solid fa-star me-2"></i>{{$game->rating}}</span>
                             <hr>
-                            <span class="card-subtitle badge text-bg-info fs-6 my-3">&#8364 {{$game->price}}</span>
+                            @if ($game->price == 0)
+                            <span class="card-subtitle badge text-bg-success fs-6 my-3">GRATIS</span>
+                            @else
+                            <span class="card-subtitle badge text-bg-light fs-6 my-3">&#8364 {{$game->price}}</span>
+                            @endif
                         </div>
                     </div>
                 </div>

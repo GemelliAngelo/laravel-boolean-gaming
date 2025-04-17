@@ -22,3 +22,14 @@ a .card:hover {
 .fa-star {
     color: rgb(228, 186, 0);
 }
+
+#platform-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 476px;
+}
+
+.platform-title {
+    font-size: 6rem;
+}

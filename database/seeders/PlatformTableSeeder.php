@@ -16,7 +16,7 @@ class PlatformTableSeeder extends Seeder
 
         $platforms = [
             [
-                'name' => 'PS5',
+                'name' => 'PlayStation',
                 'color' => '#003087',
             ],
             [

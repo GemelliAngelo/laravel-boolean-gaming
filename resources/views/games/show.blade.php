@@ -7,7 +7,7 @@
         <img class="img-fluid w-75 rounded" src="{{asset('storage/'. $game->cover_url)}}" alt="cover {{$game->title}}">
         <div class="d-flex flex-column justify-content-between align-items-center text-bg-dark w-25 py-3 gap-2 rounded">
             <h5 class="text-center">{{$game->publisher}} / {{$game->developer}}</h5>
-            <div>
+            <div class="text-center">
               @foreach ($game->platforms as $platform)
               <span class="badge rounded-pill" style="background-color: {{$platform->color}}">{{$platform->name}}</span>
               @endforeach

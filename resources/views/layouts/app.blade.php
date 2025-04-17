@@ -67,6 +67,7 @@
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                 <a class="dropdown-item" href="{{ url('profile') }}">{{__('Profilo')}}</a>
                                 <a class="dropdown-item" href="{{ route('games.index') }}">{{__('Giochi')}}</a>
+                                <a class="dropdown-item" href="{{ route('platforms.index') }}">{{__('Piattaforme')}}</a>
                                 <a class="dropdown-item text-danger" href="{{ route('logout') }}" onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                     {{ __('Disconnetti') }}

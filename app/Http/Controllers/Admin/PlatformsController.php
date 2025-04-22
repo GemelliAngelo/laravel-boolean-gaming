@@ -61,8 +61,11 @@ class PlatformsController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(Platform $platform)
     {
-        //
+        $platform->games()->detach();
+        $platform->delete();
+
+        return redirect()->route("platforms.index");
     }
 }

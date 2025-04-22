@@ -53,9 +53,16 @@ class PlatformsController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, Platform $platform)
     {
-        //
+        $data = $request->all();
+
+        $platform->name = $data['name'];
+        $platform->color = $data['color'];
+
+        $platform->update();
+
+        return "sei nella update";
     }
 
     /**

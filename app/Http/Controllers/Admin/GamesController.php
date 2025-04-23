@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Game;
+use App\Models\Genre;
 use App\Models\Platform;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
@@ -26,8 +27,9 @@ class GamesController extends Controller
     public function create()
     {
         $platforms = Platform::all();
+        $genres = Genre::all();
 
-        return view('games.store', compact('platforms'));
+        return view('games.store', compact('genres', 'platforms'));
     }
 
     /**
@@ -41,6 +43,7 @@ class GamesController extends Controller
 
         $newGame->title = $data['title'];
         $newGame->description = $data['description'];
+        $newGame->genre_id = $data['genre_id'];
         $newGame->publisher = $data['publisher'];
         $newGame->developer = $data['developer'];
         $newGame->release_date = $data['release_date'];
@@ -74,8 +77,9 @@ class GamesController extends Controller
     public function edit(Game $game)
     {
         $platforms = Platform::all();
+        $genres = Genre::all();
 
-        return view('games.update', compact('game', 'platforms'));
+        return view('games.update', compact('game', 'platforms', 'genres'));
     }
 
     /**
@@ -87,6 +91,7 @@ class GamesController extends Controller
 
         $game->title = $data['title'];
         $game->description = $data['description'];
+        $game->genre_id = $data['genre_id'];
         $game->publisher = $data['publisher'];
         $game->developer = $data['developer'];
         $game->release_date = $data['release_date'];

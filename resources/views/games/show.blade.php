@@ -7,6 +7,9 @@
         <img class="img-fluid w-75 rounded" src="{{asset('storage/'. $game->cover_url)}}" alt="cover {{$game->title}}">
         <div class="d-flex flex-column justify-content-between align-items-center text-bg-dark w-25 py-3 gap-2 rounded">
             <h5 class="text-center">{{$game->publisher}} / {{$game->developer}}</h5>
+            @if ($game->genre)
+            <span>{{$game->genre->name}}</span>
+            @endif
             <div class="text-center">
               @foreach ($game->platforms as $platform)
               <span class="badge rounded-pill" style="background-color: {{$platform->color}}">{{$platform->name}}</span>
@@ -20,7 +23,7 @@
                             <span class="card-subtitle badge text-bg-light fs-6 my-3">&#8364 {{$game->price}}</span>
                             @endif
             <small>{{date("m/Y",strtotime($game->release_date))}}</small>
-            <div class="div">
+            <div>
                 <a class="btn btn-warning me-2" href="{{route("games.edit", $game)}}"><i class="fa-solid fa-pen"></i></a>
                 <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteModal">
                     <i class="fa-solid fa-trash"></i>
@@ -28,7 +31,9 @@
             </div>
         </div>
     </div>
-        <a class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover" href="{{route('games.index')}}">&#8676 Torna a tutti i giochi</a>
+    <div class="py-3">
+      <a class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover" href="{{route('games.index')}}">&#8676 Torna a tutti i giochi</a>
+    </div>
 
 
     <div id="deleteModal" class="modal" tabindex="-1">

@@ -11,7 +11,18 @@
                     <input class="form-control" type="text" name="title" id="title" required>
                 </div>
             </div>
-            <div class="col-6">
+            <div class="col-3">
+                <div class="form-control bg-dark-subtle mb-3">
+                    <label for="genre_id" class="form-label">Genere</label>
+                    <select name="genre_id" id="genre_id" class="form-select">
+                        <option selected>Nessun Genere</option>
+                        @foreach ($genres as $genre)
+                            <option value="{{$genre->id}}">{{$genre->name}}</option>
+                        @endforeach
+                    </select>
+                </div>
+            </div>
+            <div class="col-3">
                 <div class="form-control bg-dark-subtle mb-3">
                     <label for="cover_url" class="form-label">Copertina</label>
                     <input type="file" name="cover_url" id="cover_url" class="form-control">

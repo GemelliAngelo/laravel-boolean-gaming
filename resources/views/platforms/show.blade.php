@@ -21,7 +21,9 @@
         <button type="button" class="btn btn-danger w-50" data-bs-toggle="modal" data-bs-target="#deleteModalPlatform"><i class="fa-solid fa-trash"></i></button>
     </div>
 
-    <a class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover" href="{{route('platforms.index')}}">&#8676 Torna a tutti i giochi</a>
+    <div class="py-3">
+      <a class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover my-3" href="{{route('platforms.index')}}">&#8676 Torna a tutti i giochi</a>
+    </div>
 
 
 

@@ -13,6 +13,10 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        $this->call([PlatformTableSeeder::class, GamesTableSeeder::class]);
+        $this->call([
+            PlatformsTableSeeder::class,
+            GenresTableSeeder::class,
+            GamesTableSeeder::class,
+        ]);
     }
 }

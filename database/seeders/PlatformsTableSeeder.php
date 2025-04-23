@@ -6,7 +6,7 @@ use App\Models\Platform;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
-class PlatformTableSeeder extends Seeder
+class PlatformsTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.

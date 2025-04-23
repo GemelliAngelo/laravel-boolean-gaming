@@ -31,7 +31,16 @@ class PlatformsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->all();
+
+        $newPlatform = new Platform();
+
+        $newPlatform->name = $data['name'];
+        $newPlatform->color = $data['color'];
+
+        $newPlatform->save();
+
+        return redirect()->route('platforms.index');
     }
 
     /**

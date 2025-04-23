@@ -11,11 +11,11 @@
     width: 50px;
 }
 
-a .card {
+.zoom {
     transition: transform 0.2s;
 }
 
-a .card:hover {
+.zoom:hover {
     transform: scale(1.1);
 }
 

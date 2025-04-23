@@ -70,11 +70,10 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annulla</button>
-        
-                        <button type="submit" class="btn btn-success">Salva</button>
-                </form>
-            </div>
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annulla</button>
+                  <button type="submit" class="btn btn-success">Salva</button>
+                </div>
+            </form>
           </div>
         </div>
     </div>

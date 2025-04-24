@@ -36,7 +36,7 @@
                        
                         
                         <div class="mb-3">
-                            <div class="form-check mb-3">
+                            <div class="form-check form-check-reverse form-control form-switch bg-dark-subtle mb-3 px-5">
                                 <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
                                 
                                 <label class="form-check-label" for="remember">

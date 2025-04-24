@@ -1,20 +1,14 @@
 @extends('layouts.app')
-
+@section('title','Benvenuto')
 @section('content')
-<div class="container">
-    <h2 class="text-secondary my-4">
-        {{ __('Benvenuto') }}
-    </h2>
-    <div class="row justify-content-center">
-        <div class="col">
-            <div class="card">
-                <div class="card-header">
-                    <h4>
+    <div class="row gy-5 justify-content-center">
+        <div class="col-12">
+            <div class="card bg-dark-subtle">               
+                <div class="card-body text-center">
+                    <h2>
                         Ciao {{Auth::user()->name}}
-                    </h4>
-                </div>
-
-                <div class="card-body">
+                    </h2>
+                    <hr>
                     @if (session('status'))
                     <div class="alert alert-success" role="alert">
                         {{ session('status') }}
@@ -25,6 +19,14 @@
                 </div>
             </div>
         </div>
+        <div class="col-12 text-center">
+            <a href="/games" class="btn btn-outline-dark py-4 w-100"><h5>Visualizza Tutti i Giochi</h5></a>
+        </div>
+        <div class="col-12 text-center">
+            <a href="/platforms" class="btn btn-outline-dark py-4 w-100"><h5>Visualizza Tutte le Piattaforme</h5></a>
+        </div>
+        <div class="col-12 text-center">
+            <a href="/genres" class="btn btn-outline-dark py-4 w-100"><h5>Visualizza Tutti i Generi</h5></a>
+        </div>
     </div>
-</div>
 @endsection

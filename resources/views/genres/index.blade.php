@@ -13,7 +13,7 @@
         <div class="col-md-6 col-xxl-3">
             <div class="card h-100 text-bg-dark">
                 <div class="card-body text-center">
-                        <h3>{{$genre->name}}</h3>
+                        <h3 class="text-bg-light">{{$genre->name}}</h3>
                         <div class="d-flex justify-content-center gap-2">
                             <button class="btn btn-warning w-50" data-bs-toggle="modal" data-bs-target="#editModalGenre-{{$genre->id}}">
                                 <i class="fa-solid fa-pen"></i>

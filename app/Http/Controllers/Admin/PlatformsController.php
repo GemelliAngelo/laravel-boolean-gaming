@@ -71,7 +71,7 @@ class PlatformsController extends Controller
 
         $platform->update();
 
-        return "sei nella update";
+        return redirect()->route('platforms.show', $platform);
     }
 
     /**

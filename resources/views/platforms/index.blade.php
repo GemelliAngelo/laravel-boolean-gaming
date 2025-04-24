@@ -58,7 +58,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Annulla</button>
-                    <button type="submit" class="btn btn-outline-primary">Salva</button>
+                    <button type="submit" class="btn btn-primary">Salva</button>
                 </div>
             </form>
           </div>

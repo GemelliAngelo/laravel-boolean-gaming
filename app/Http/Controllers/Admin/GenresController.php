@@ -32,7 +32,15 @@ class GenresController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->all();
+
+        $newGenre = new Genre();
+
+        $newGenre->name = $data['name'];
+
+        $newGenre->save();
+
+        return redirect()->route('genres.index');
     }
 
     /**
@@ -54,16 +62,24 @@ class GenresController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, Genre $genre)
     {
-        //
+        $data = $request->all();
+
+        $genre->name = $data['name'];
+
+        $genre->update();
+
+        return redirect()->route('genres.index');
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(Genre $genre)
     {
-        //
+        $genre->delete();
+
+        return redirect()->route("genres.index");
     }
 }

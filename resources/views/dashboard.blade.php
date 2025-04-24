@@ -20,13 +20,13 @@
             </div>
         </div>
         <div class="col-12 text-center">
-            <a href="{{route('games.index')}}" class="btn btn-outline-dark py-4 w-100"><h5>Visualizza Tutti i Giochi</h5></a>
+            <a href="{{route('games.index')}}" class="btn btn-dark py-4 w-100 "><h5>Visualizza Tutti i Giochi</h5></a>
         </div>
         <div class="col-12 text-center">
-            <a href="{{route('platforms.index')}}" class="btn btn-outline-dark py-4 w-100"><h5>Visualizza Tutte le Piattaforme</h5></a>
+            <a href="{{route('platforms.index')}}" class="btn btn-dark py-4 w-100 "><h5>Visualizza Tutte le Piattaforme</h5></a>
         </div>
         <div class="col-12 text-center">
-            <a href="{{route('genres.index')}}" class="btn btn-outline-dark py-4 w-100"><h5>Visualizza Tutti i Generi</h5></a>
+            <a href="{{route('genres.index')}}" class="btn btn-dark py-4 w-100 "><h5>Visualizza Tutti i Generi</h5></a>
         </div>
     </div>
 @endsection

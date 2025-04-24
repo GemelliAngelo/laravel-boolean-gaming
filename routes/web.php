@@ -3,6 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\GamesController;
+use App\Http\Controllers\Admin\GenresController;
 use App\Http\Controllers\Admin\PlatformsController;
 
 Route::get('/', function () {
@@ -17,5 +18,6 @@ Route::middleware('auth')->group(function () {
 
 Route::resource("games", GamesController::class)->middleware(["auth", "verified"]);
 Route::resource("platforms", PlatformsController::class)->middleware(["auth", "verified"]);
+Route::resource("genres", GenresController::class)->middleware(["auth", "verified"]);
 
 require __DIR__ . '/auth.php';

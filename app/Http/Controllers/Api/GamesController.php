@@ -20,4 +20,16 @@ class GamesController extends Controller
             ]
         );
     }
+
+    public function show($id)
+    {
+        $game = Game::with('platforms')->find($id);
+
+        return response()->json(
+            [
+                'success' => true,
+                'data' => $game,
+            ]
+        );
+    }
 }

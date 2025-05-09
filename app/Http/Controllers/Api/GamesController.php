@@ -11,7 +11,7 @@ class GamesController extends Controller
     public function index()
     {
 
-        $games = Game::with('platforms')->get();
+        $games = Game::with('platforms', 'genre')->get();
 
         return response()->json(
             [
@@ -23,7 +23,7 @@ class GamesController extends Controller
 
     public function show($id)
     {
-        $game = Game::with('platforms')->find($id);
+        $game = Game::with('platforms', 'genre')->find($id);
 
         return response()->json(
             [

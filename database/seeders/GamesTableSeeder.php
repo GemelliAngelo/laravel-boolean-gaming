@@ -14,7 +14,7 @@ class GamesTableSeeder extends Seeder
     public function run(): void
     {
 
-        $games = $videogames = [
+        $games = [
             [
                 "title" => "The Legend of Zelda: Breath of the Wild",
                 "cover_url" => "covers/PJszKRQD17ULKkiOXxIOUryA8FltMh1IxYlxL2ff.jpg",
